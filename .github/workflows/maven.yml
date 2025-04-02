@@ -22,5 +22,5 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Execute API tests
-      run: mvn clean test -Dsuite=suite -x
+      run: mvn clean test -Dsuite=suite -X
 
