@@ -1,5 +1,7 @@
 package com.api.tests;
 
+import static org.testng.Assert.assertEquals;
+
 import org.testng.annotations.Test;
 
 import com.api.base.AuthService;
@@ -21,7 +23,7 @@ public class SignUpApiTest {
 		 
 	AuthService service = new AuthService();
 	Response response = service.signUp(signUpRequest);
-	
+	assertEquals(200, response.getStatusCode());
 	System.out.println(response.asPrettyString());
 	}
 }
